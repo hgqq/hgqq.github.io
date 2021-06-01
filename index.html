@@ -1,101 +1,74 @@
-<!DOCTYPE html>
 
-<html lang="en">
+<!DOCTYPE html>
+<html>
   <head>
     <meta charset="utf-8">
-    <title>Selected Shakespeare Plays</title>
-
-    <link rel="stylesheet" href="02.css" type="text/css" />
-
-    <script src="jquery.js"></script>
-    <script src="02.js"></script>
+    <title>Complex flexbox example</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Jura:wght@500s&display=swap'); */
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Jura', sans-serif;
+        }
+        body {
+            background-image: url(http://image.photocnc.com/photocnc/2020-06/28/20200628122236a54faae513dd0f66a9e2c9257d1c6e52.jpg.h400.jpg);
+            background-size:100% 100%; 
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .glass {
+            position: fixed;
+            top: 10px;
+            font-size: 100px;
+            font-weight: bold;
+            /* background: linear-gradient(to right, red, blue, yellow);
+            -webkit-background-clip: text;
+            color: transparent; */
+            mix-blend-mode: overlay;
+        }
+        .card {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 20px;
+            background: linear-gradient(
+                to right bottom, 
+                rgba(255, 255, 255, 0.6), 
+                rgba(255, 255, 255, 0.1)
+                );
+            backdrop-filter: blur(8px);
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.8);
+            border-left: 1px solid rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: center;
+            justify-content: space-around;
+            align-items: center;
+            align-items: space-around;
+            flex-wrap: wrap;
+        }
+    </style>
   </head>
   <body>
-    <div id="container">
-      <h2>Selected Shakespeare Plays</h2>
-      <ul id="selected-plays" class="clear-after">
-        <li>Comedies
-          <ul>
-            <li><a href="/asyoulikeit/">As You Like It</a></li>
-            <li>All's Well That Ends Well</li>
-            <li>A Midsummer Night's Dream</li>
-            <li>Twelfth Night</li>
-          </ul>
-        </li>
-        <li>Tragedies
-          <ul>
-            <li><a href="hamlet.pdf">Hamlet</a></li>
-            <li>Macbeth</li>
-            <li>Romeo and Juliet</li>
-          </ul>
-        </li>
-        <li>Histories
-          <ul>
-            <li>Henry IV (<a href="mailto:henryiv@king.co.uk">email</a>)
-              <ul>
-                <li>Part I</li>
-                <li>Part II</li>
-              </ul>
-            </li>
-            <li><a href="http://www.shakespeare.co.uk/henryv.htm">Henry V</a></li>
-            <li>Richard II</li>
-          </ul>
-        </li>
-      </ul>
-
-      <h2>Shakespeare's Plays</h2>
-      <table>
-        <tr>
-          <td>As You Like It</td>
-          <td>Comedy</td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>All's Well that Ends Well</td>
-          <td>Comedy</td>
-          <td>1601</td>
-        </tr>
-        <tr>
-          <td>Hamlet</td>
-          <td>Tragedy</td>
-          <td>1604</td>
-        </tr>
-        <tr>
-          <td>Macbeth</td>
-          <td>Tragedy</td>
-          <td>1606</td>
-        </tr>
-        <tr>
-          <td>Romeo and Juliet</td>
-          <td>Tragedy</td>
-          <td>1595</td>
-        </tr>
-        <tr>
-          <td>Henry IV, Part I</td>
-          <td>History</td>
-          <td>1596</td>
-        </tr>
-        <tr>
-          <td>Henry V</td>
-          <td>History</td>
-          <td>1599</td>
-        </tr>
-      </table>
-      <h2>Shakespeare's Sonnets</h2>
-      <table>
-        <tr>
-          <td>The Fair Youth</td>
-          <td>1–126</td>
-        </tr>
-        <tr>
-          <td>The Dark Lady</td>
-          <td>127–152</td>
-        </tr>
-        <tr>
-          <td>The Rival Poet</td>
-          <td>78–86</td>
-        </tr>
-      </table>
+    <div class="glass">
+        世界上最美丽的小仙女
     </div>
+      <div class="card">
+
+        <img src="img/1.jpg" height="200" width="200" alt="">
+        <img src="img/2.jpg" height="200" width="200" alt="">
+        <img src="img/3.jpg" height="200" width="200" alt="">
+        <img src="img/4.jpg" height="200" width="200" alt="">
+        <img src="img/5.jpg" height="200" width="200" alt="">
+        <img src="img/6.jpg" height="200" width="200" alt="">
+        <img src="img/7.jpg" height="200" width="200" alt="">
+        <img src="img/8.jpg" height="200" width="200" alt="">
+        <img src="img/9.jpg" height="200" width="200" alt="">
+      </div>
   </body>
 </html>
